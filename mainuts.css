@@ -1,0 +1,539 @@
+body{
+    font-family:'Montserrat',sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    cursor: pointer;
+}
+/*Navigation css*/
+.navbar{
+    background-color: #1F4172;
+    color:white ;
+}
+.navbar-toggler {
+    background-color: transparent;
+     color: white;
+    margin-top:0;
+    padding-bottom: 25px;
+    position: fixed;
+}
+.navbar-nav li{
+    padding: 15px 20px;
+
+}
+
+.navbar button{
+    outline: none;
+    border: none;
+}
+.navbar-toggler-icon{
+    float: left;
+    position: fixed;
+    left: 0;
+}
+.navbar-brand{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 7vw;
+    margin-right: 20vw;
+
+}
+.navbar-nav>.active>a, .navbar-nav>.active>a:hover {
+    color: white;;
+    border-bottom: 2px solid #FFCCBC;
+
+}
+ .navbar-nav>li>a:hover {
+    color:white;
+    background-color:rgba(0.5,1.0,1.0,0.09);
+    transition: 0.5s ease-in-out;
+
+}
+.navbar-nav{
+    flex-direction: row;
+}
+
+    /* Side Navigation----*/
+
+.sidenav{
+	height: 100%;
+	width:0;
+	position: fixed;
+	z-index: 1;
+	top:0;
+	left: 0;
+	background-color: white;
+	overflow-x:hidden;
+	padding-top: 30px;
+	transition: 0.6s ease-out;
+}
+.sidenav a, .dropdown-btn ,.dropdown-btns{
+	text-align: left;
+	text-decoration: none;
+	font-size: 15px;
+	color: #1F4172;
+	display: block;
+	transition: 0.3s;
+	font-weight: bold;
+    border: none;
+    background: none;
+    width: 100%;
+    outline: none;
+    padding: 16px
+
+}
+.sidenav .closebutton{
+	position: absolute;
+	top:0;
+	right: 20px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+.sidenav .closebutton{
+    text-align: right;
+    color: #1F4172;
+    cursor: pointer;
+}
+.sidenav .closebutton:hover{
+	color: red;
+
+}
+.sidenav a:hover{
+    background-color: #ddd;
+}
+.sidenav button:hover{
+color: #1F4172;
+    background-color: #ddd;
+
+ }
+.sidenav .closearrow{
+color: #1F4172;
+    font-size: 36px;
+    cursor: pointer;
+
+}
+.fa-caret-down{
+    float: right;
+    padding-right: 8px;
+}
+
+/*Drop down in Side navigation*/
+
+.dropdown-container{
+    display: none;
+    background-color:#1F4172 ;
+    padding-left: 8px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+.dropdown-container a{
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: normal;
+    transition: 0.3s ease;
+}
+.dropdown-container a:hover{
+    background-color: #ddd;
+}
+
+.show{
+    display: block;
+}
+
+
+
+
+
+
+
+.searchbar{                                     /*Search bar*/
+    position: relative;
+    padding:0;
+
+}
+.searchbar input[type="text"]{
+    border: none;
+    width:0;
+    height:20px;
+    transition: all 0.5s 0.2s ease;
+    color: black;
+}
+
+.searchbar i{
+   background:none;
+    padding-left: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.searchbar i.active{
+    background:none;
+   transition: all 0.3s ease-in-out;
+
+}
+.searchbar input[type="text"].active{
+    width: 20vw;
+   padding: 10px;
+    transition: all 0.5s 0.2s ease;
+    border-radius: 50px;
+outline: none;
+    border: none;
+color: black;
+
+
+} 
+                                              /* For sign Modal*/
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width:100%;
+	height: 100%;
+	overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+.tab{
+    overflow: hidden;
+    background-color: #fefefe ;
+padding: 0.5vw 1vw 1.5vw 4vw;
+
+}
+.tab button{
+   border:none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    padding:1vw 3vw ;
+    font-size: 17px;
+
+}
+.tab button:hover{
+    background-color: transparent;
+    border: none;
+}
+.tab button.active{
+    background-color: inherit;
+    border-bottom: 2px solid #1F4172;
+}
+.modal-content{
+    padding: 15px;
+	background-color: #fefefe;
+	border:1px solid #888;
+	width: 30%;
+	margin-left: 30vw;
+	border-radius: 3px;
+}
+#id01 form>input{
+	width:80%;
+	padding:4px;
+	margin: 10px;
+}
+
+.animate{
+	-webkit-animation:animatezoom 0.6s;
+	animation: animatezoom 0.6s;
+}
+@-webkit-keyframes animatezoom{
+	from{
+		-webkit-transform:scale(0);
+	}
+	to{
+		-webkit-transform:scale(1);
+	}
+}
+@keyframes animatezoom{
+	from{
+		transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+
+
+                                /*Hover dropdown contents*/
+.dropdown{
+    overflow: hidden;
+    z-index: 500;
+}
+.dropdown .dropbtn{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+
+}
+.dropdown:hover .dropbtn{
+    background:rgba(0.5,1.0,1.0,0.09) ;
+    transition: 0.5s ease-in-out;
+}
+.dropdown-content{
+    display: none;
+    background-color: #fefefe;
+    min-width: inherit;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+    position: fixed;
+}
+.dropdown-content a{
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: normal;
+    padding: 3px;
+    cursor: pointer;
+}
+
+h{
+   color: #FF6568;
+}
+.dropdown-content a:hover{
+    background-color: #ddd;
+    color: #1f4172;
+}
+.dropdown-content li{
+    padding: 20px;
+}
+.dropdown:hover .dropdown-content{
+    display: flex;
+    transition: 0.5s ease-in-out;
+    position: fixed;
+}
+
+
+                                           /*Responsive layout---*/
+
+@media screen and (max-width: 600px){
+
+.modal-content{
+    padding:15px;
+	background-color: #fefefe;
+	border:1px solid #888;
+	width: 100%;
+	font-size: 10px;
+    margin-left: 0;
+
+}
+    .footer-links{
+      display: none;
+    }
+    .drops{
+        display: block;
+    }
+
+}
+.drops{
+    display: none;
+}
+.container .btn{
+    background: black;
+    color: white;
+    border-radius: 0;
+    padding: 10px;
+}
+.container input[type='text']{
+    width: 50%;
+    padding: 9px;
+    margin: 0;
+
+}
+
+.footer-top{
+    background-color: #f6bbbc;
+    color: Black;
+    padding: 50px;
+}
+ h4{
+    color:black;
+    text-transform: uppercase;
+     font-weight: bold;
+}
+.segment-two h4:before{
+    content: '|';
+    color: #1f4172;
+    padding-right: 10px;
+    
+}
+.segment-three h4:before{
+    content: '|';
+    color: #1f4172;
+    padding-right: 10px;
+}
+.segment-four h4:before{
+    content: '|';
+    color: #1f4172;
+    padding-right: 10px;
+}
+
+ ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.segment-two ul li a{
+    color:black;
+    text-decoration: none;
+}
+.segment-three ul li a{
+    color:black;
+    text-decoration: none;
+}
+.segment-four ul li a{
+    color:black;
+    text-decoration: none;
+}
+.footer-links{
+    line-height: 35px;
+}
+.fa-truck{
+    font-size:70px;
+}
+.fa-phone{
+    font-size: 70px;
+}
+.fa-facebook{
+    font-size: 20px;
+    color: blue;
+    padding: 10px 14px;
+}
+.fa-twitter{
+    font-size: 20px;
+    color: #007bff;
+    padding: 10px 12px;
+}
+.fa-instagram{
+    font-size: 20px;
+    color: deeppink;
+    padding: 10px 12px;
+}
+
+.segment-four a{
+    background-color: #fefefe;
+    display: inline-block;
+    border-radius: 25%;
+    text-decoration: none;
+    margin:5px;
+}
+
+
+@media only screen and  (min-width: 768px) and (max-width:991px){
+    .md-mb-30{
+        margin-bottom: 30px;
+    }
+}
+@media only screen and  (max-width: 767px) {
+    .sm-mb-30{
+        margin-bottom: 30px;
+    }
+    .footer-top{
+        padding: 50px 0;
+    }
+}
+
+
+
+
+@media screen and (max-width:1122px) and (min-width:768px){
+    .sidenav{
+        display: none;
+
+    }
+
+    .searchbar input[type="text"].active {
+        width:150px;
+        transition: all 0.5s 0.2s ease;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: black;
+    }
+
+}
+@media screen and (max-width:769px) and (min-width:600px) {
+    .navbar-brand{
+        margin-right: 0;
+    }
+
+
+  
+        .searchbar input[type="text"].active {
+        width:150px;
+        transition: all 0.5s 0.2s ease;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: black;
+    }
+}
+@media screen and (max-width:1020px){
+    .navbar-brand{
+        margin-right: 0;
+    }
+}
+@media screen and (max-width:800px)
+{
+    
+}
+@media screen and (max-width:1290px) and (min-width:601px)
+{
+    .modal-content{
+        padding: 15px;
+        background-color: #fefefe;
+        border:1px solid #888;
+        width:50%;
+        margin-left: 20vw;
+        border-radius: 3px;
+    }
+}
+@media screen and (max-width:800px) and (min-width:576px)
+{
+    .navbar-brand{
+        margin-left: 0;
+    }
+    .sign{
+        display: none;
+    }
+    .navbar-nav li{
+        padding: 5px 10px;
+
+    }
+
+
+}
+    @media screen and (max-width: 600px){
+        .sign{
+            display: none;
+        }
+
+        .service{
+        font-size: 10px;
+        padding: 30px;
+        margin: 0;
+    }
+ 
+    .searchbar input[type="text"].active {
+        width:150px;
+        transition: all 0.5s 0.2s ease;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: black;
+    }
+
+
